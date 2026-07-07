@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://your-encanto-cafe-domain.com/sitemap.xml

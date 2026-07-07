@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-[#FDFBF7] text-[#1A0F0A] font-sans antialiased selection:bg-[#D4AF37]/30 selection:text-[#1A0F0A];
+  }
+  
+  /* Focus outline styles for accessibility */
+  :focus-visible {
+    @apply outline-none ring-2 ring-[#D4AF37] ring-offset-2 ring-offset-[#FDFBF7];
+  }
+}
+
+/* Custom scrollbar matching coffee aesthetic */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FDFBF7;
+}
+::-webkit-scrollbar-thumb {
+  background: #1A0F0A;
+  border: 2px solid #FDFBF7;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+/* Custom layout helper for masonry */
+.masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-gap: 1.5rem;
+}
